@@ -51,9 +51,10 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div []
+    div [ class "my-class" ]
         [ h3 []
             [ text ("Total Calories: " ++ (toString model)) ]
+        , input [ type' "text" ] []
         , button
             [ type' "button"
             , onClick AddCalorie
